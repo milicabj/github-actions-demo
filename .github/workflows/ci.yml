@@ -24,3 +24,6 @@ jobs:
 
       - name: Pokretanje testova
         run: npm test
+      - name: Simulacija deploy-a
+        if: success()
+        run: echo "Deploy nakon uspješnih testova"
