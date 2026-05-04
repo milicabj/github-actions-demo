@@ -1,13 +1,14 @@
-name: CI Demo
+name: CI/CD Demo
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  test:
+  test-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,13 +18,14 @@ jobs:
       - name: Podešavanje Node.js okruženja
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Instalacija zavisnosti
         run: npm install
 
       - name: Pokretanje testova
         run: npm test
-      - name: Simulacija deploy-a
+
+      - name: Simulacija CD faze
         if: success()
-        run: echo "Deploy nakon uspješnih testova"
+        run: echo "Deployment step executed after successful tests."
