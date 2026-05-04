@@ -27,7 +27,7 @@ assertEqual(
 assertEqual(
   validateUserAccess({
     name: "Ana",
-    email: "ana@example.com",
+    email: "",
     age: 30,
     role: "admin",
   }),
