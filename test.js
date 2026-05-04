@@ -1,6 +1,6 @@
-const saberi = require("./index");
+const calculateTotalPrice = require("./index");
 
-if (saberi(2, 3) !== 5) {
+if (calculateTotalPrice(10, 3) !== 30) {
   throw new Error("Test nije prošao");
 }
 

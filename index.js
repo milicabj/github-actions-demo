@@ -1,5 +1,5 @@
-function saberi(a, b) {
-  return a - b;
+function calculateTotalPrice(price, quantity) {
+  return price * quantity;
 }
 
-module.exports = saberi;
+module.exports = calculateTotalPrice;
